@@ -5,9 +5,10 @@
     <nuxt-link to="/news/social">Social</nuxt-link>
     <nuxt-link to="/news/company">Company</nuxt-link>
     <div class="main">
-      <nuxt-child 
-        :key="$route.params.index" 
-        keep-alive/>
+      <nuxt-child
+        :key="$route.params.index"
+        keep-alive
+      />
     </div>
   </div>
 </template>
@@ -17,7 +18,7 @@ import loaddingHelper from '~/assets/script'
 export default {
   transition: 'slide-left',
   mixins: [loaddingHelper],
-  mounted() {
+  mounted () {
     this.messageCancel()
   }
 }

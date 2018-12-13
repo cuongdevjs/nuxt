@@ -17,12 +17,8 @@ html {
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 *,
@@ -125,4 +121,58 @@ html {
 .slide-right-enter {
   opacity: 0;
   transform: translate(-30px, 0);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.between-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+
+.navbar {
+  /* margin-bottom: 25px; */
+}
+
+.menu {
+  width: 175px;
+  height: 100vh;
+  background-color: #35495e;
 }

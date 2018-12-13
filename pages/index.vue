@@ -1,8 +1,8 @@
 <template>
-  <el-row v-loading="loading">
+  <div v-loading="loading">
     <el-row>{{ user }}</el-row>
     <el-row>{{ token }}</el-row>
-  </el-row>
+  </div>
 </template>
 
 <style>
@@ -21,7 +21,7 @@ import axios from 'axios'
 import loaddingHelper from '~/assets/script'
 export default {
   mixins: [loaddingHelper],
-  async asyncData() {
+  async asyncData () {
     let app = {
       email: 'khanhln.c1003j@gmail.com',
       password: 123456
@@ -35,7 +35,7 @@ export default {
       token: data.data.token
     }
   },
-  data() {
+  data () {
     const item = {
       date: '2016-05-02',
       name: 'Tom',
@@ -46,6 +46,10 @@ export default {
       loading: false
     }
   },
-  middleware: 'auth'
+  middleware: 'auth',
+  mounted () {
+    console.log('ok')
+    console.log(this.$router.options.routes)
+  }
 }
 </script>

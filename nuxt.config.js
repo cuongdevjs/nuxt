@@ -10,8 +10,7 @@ module.exports = {
   },
   head: {
     title: 'Nguyen Manh Cuong',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
@@ -24,8 +23,7 @@ module.exports = {
         content: pkg.description
       }
     ],
-    link: [
-      {
+    link: [{
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
@@ -44,9 +42,9 @@ module.exports = {
    ** Global CSS
    */
   css: [
-    '~/assets/style.css',
     'element-ui/lib/theme-chalk/reset.css',
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '~/assets/style.css'
   ],
 
   /*

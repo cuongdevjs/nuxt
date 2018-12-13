@@ -1,26 +1,26 @@
 const loaddingHelper = {
-  data() {
+  data () {
     return {
       changedData: false,
       watching: false
     }
   },
   methods: {
-    message200() {
+    message200 () {
       this.$notify({
         type: 'success',
         title: 'Success',
         message: 'Completed!'
       })
     },
-    messageDelete200() {
+    messageDelete200 () {
       this.$notify({
         type: 'success',
         title: 'Success',
         message: 'Delete Completed!'
       })
     },
-    message403(params) {
+    message403 (params) {
       var title =
         params !== undefined ? params : 'You do not have permission to access!'
       this.$notify.error({
@@ -28,7 +28,7 @@ const loaddingHelper = {
         message: ''
       })
     },
-    message404() {
+    message404 () {
       this.$notify({
         type: 'warning',
         title: 'Fail',
@@ -36,27 +36,27 @@ const loaddingHelper = {
       })
     },
 
-    notify(title, message, type) {
+    notify (title, message, type) {
       this.$message({
         title: title,
         message: message,
         type: type
       })
     },
-    messageError(params) {
+    messageError (params) {
       var title = params !== undefined ? params : 'Error'
       this.$notify.error({
         title: title,
         message: 'Oops! Something went wrong !'
       })
     },
-    messageValidate() {
+    messageValidate () {
       this.$notify.error({
         title: 'Error',
         message: 'Check your submit!'
       })
     },
-    messageCancel() {
+    messageCancel () {
       this.$message({
         type: 'info',
         message: 'Canceled!'
