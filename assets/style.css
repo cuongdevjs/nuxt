@@ -165,7 +165,9 @@ html {
   align-items: flex-end;
 }
 
-
+.clickable {
+  cursor: pointer;
+}
 
 .navbar {
   /* margin-bottom: 25px; */
@@ -175,4 +177,15 @@ html {
   width: 175px;
   height: 100vh;
   background-color: #35495e;
+}
+
+.menu-2 {
+  height: 100%;
+}
+
+.menu-2 .item {
+  display: block;
+  color: black;
+  width: 100%;
+  padding: 10px 25px;
 }

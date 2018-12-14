@@ -3,13 +3,20 @@
     <div
       v-for="item in listMenu"
       :key="item.path"
-      class="center"
+      class="center clickable"
     >
-      <div
-        v-show="item.path.split('/').length===2"
+      <nuxt-link
+        :to="item.path"
+        v-show="item.path.split('/').length===2 && item.name != 'index' "
         class="item"
-      >{{item.name}}</div>
-      <!-- <div v-else>Home</div> -->
+      >{{item.name}}</nuxt-link>
+      <nuxt-link
+        v-show="item.name === 'index'"
+        :to="item.path"
+        class="item"
+      >
+        Home
+      </nuxt-link>
     </div>
   </el-row>
 </template>

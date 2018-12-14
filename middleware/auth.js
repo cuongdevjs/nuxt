@@ -1,4 +1,7 @@
-// import loaddingHelper from '~/assets/script'
-export default function({ route }) {
-  // loaddingHelper.methods.message200()
+import loaddingHelper from '~/assets/script'
+export default function ({
+  route
+}) {
+  loaddingHelper.methods.message200()
 }
+s

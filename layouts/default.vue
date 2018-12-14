@@ -1,14 +1,17 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <el-row class="between">
-      <div
-        :span="3"
+    <el-row>
+      <el-col
+        :span="4"
         class="menu"
       >
         <Menu />
-      </div>
-      <el-col class="view">
+      </el-col>
+      <el-col
+        :span="20"
+        class="view"
+      >
         <nuxt />
       </el-col>
     </el-row>

@@ -1,15 +1,33 @@
 <template>
   <div>
-    <h2>This is news 360</h2>
-    <nuxt-link to="/news/lastest">Lastest</nuxt-link>
-    <nuxt-link to="/news/social">Social</nuxt-link>
-    <nuxt-link to="/news/company">Company</nuxt-link>
-    <div class="main">
-      <nuxt-child
-        :key="$route.params.index"
-        keep-alive
-      />
-    </div>
+    <el-row>
+      <el-col
+        :span="4"
+        class="menu-2"
+      >
+        <nuxt-link
+          class="item"
+          to="/news/lastest"
+        >Lastest</nuxt-link>
+        <nuxt-link
+          class="item"
+          to="/news/social"
+        >Social</nuxt-link>
+        <nuxt-link
+          class="item"
+          to="/news/company"
+        >Company</nuxt-link>
+      </el-col>
+      <el-col
+        :span="20"
+        class="main"
+      >
+        <nuxt-child
+          :key="$route.params.index"
+          keep-alive
+        />
+      </el-col>
+    </el-row>
   </div>
 </template>
 

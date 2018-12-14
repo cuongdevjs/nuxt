@@ -5,7 +5,7 @@
     <nuxt-link to="/">Home page</nuxt-link>
   </div>
 </template>
-
+/* eslint-disable */
 <script>
 export default {
   props: {

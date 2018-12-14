@@ -1,7 +1,12 @@
 <template>
   <div v-loading="loading">
-    <el-row>{{ user }}</el-row>
-    <el-row>{{ token }}</el-row>
+    <el-row
+      class="between"
+      :gutter="21"
+    >
+      <el-col :span="12">{{ user }}</el-col>
+      <el-col :span="12">{{ token }}</el-col>
+    </el-row>
   </div>
 </template>
 
@@ -19,37 +24,36 @@
 <script>
 import axios from 'axios'
 import loaddingHelper from '~/assets/script'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   mixins: [loaddingHelper],
-  async asyncData () {
+  methods: {
+    ...mapActions(['setLoading', 'setStopLoading'])
+  },
+  data () {
+    return {
+      token: '',
+      user: ''
+    }
+  },
+  middleware: 'auth',
+  async mounted () {
+    console.log(this.$router.options.routes)
     let app = {
       email: 'khanhln.c1003j@gmail.com',
       password: 123456
     }
+    await this.setLoading()
     const data = await axios.post(
       'http://360tovisit.starfruit.com.vn/api/v1/admin/login',
       app
     )
-    return {
-      user: data.data.user,
-      token: data.data.token
-    }
+    await this.setStopLoading()
+    this.user = data.data.user
+    this.token = data.data.token
   },
-  data () {
-    const item = {
-      date: '2016-05-02',
-      name: 'Tom',
-      address: 'No. 189, Grove St, Los Angeles'
-    }
-    return {
-      tableData: Array(20).fill(item),
-      loading: false
-    }
-  },
-  middleware: 'auth',
-  mounted () {
-    console.log('ok')
-    console.log(this.$router.options.routes)
+  computed: {
+    ...mapGetters(['loading']),
   }
 }
 </script>
