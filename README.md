@@ -1,5 +1,7 @@
 # nuxtFirst
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/CuongStf/nuxt.svg)](https://greenkeeper.io/)
+
 > My fine Nuxt.js project
 
 ## Build Setup
