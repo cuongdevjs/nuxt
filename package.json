@@ -14,24 +14,24 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
-    "cross-env": "^5.2.0",
+    "cross-env": "^6.0.3",
     "element-ui": "^2.4.11",
     "nuxt": "^2.0.0",
-    "vue-meta": "^1.5.5"
+    "vue-meta": "^2.3.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^5.10.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-loader": "^2.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-loader": "^3.0.2",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "3.1.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^4.0.0",
+    "eslint-plugin-vue": "^6.0.1",
     "nodemon": "^1.11.0",
-    "prettier": "1.14.3"
+    "prettier": "1.19.1"
   }
 }
