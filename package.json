@@ -17,7 +17,7 @@
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
     "nuxt": "^2.0.0",
-    "vue-meta": "^1.5.5"
+    "vue-meta": "^2.3.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
